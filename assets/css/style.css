@@ -1,0 +1,28 @@
+.glitch-text {
+  font-family: 'Courier New', monospace;
+  color: #A259FF;
+  position: relative;
+}
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  color: #33FF99;
+  animation: glitch 2s infinite linear alternate-reverse;
+}
+@keyframes glitch {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  5% { clip: rect(0, 9999px, 5px, 0); }
+  10% { clip: rect(5px, 9999px, 10px, 0); }
+  15% { clip: rect(10px, 9999px, 15px, 0); }
+  20% { clip: rect(15px, 9999px, 20px, 0); }
+  25% { clip: rect(20px, 9999px, 25px, 0); }
+  30% { clip: rect(25px, 9999px, 30px, 0); }
+  35% { clip: rect(30px, 9999px, 35px, 0); }
+  40% { clip: rect(35px, 9999px, 40px, 0); }
+  45% { clip: rect(40px, 9999px, 45px, 0); }
+  50% { clip: rect(45px, 9999px, 50px, 0); }
+}

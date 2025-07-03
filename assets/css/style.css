@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  background-color: #1A1A1A;
+  color: #D0D0D0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: #111;
+}
+
+.logo {
+  height: 32px;
+  margin-right: 0.5em;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left .site-title {
+  font-size: 1.2rem;
+  color: #33FF99;
+}
+
+.nav-right a {
+  margin-left: 1.5em;
+  color: #D0D0D0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  height: 60vh;
+  background: radial-gradient(#A259FF11 1px, transparent 1px);
+  background-size: 32px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1.glitch {
+  font-size: 4rem;
+  color: #33FF99;
+  position: relative;
+}
+
+h1.glitch::before, h1.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  color: #A259FF;
+  clip: rect(0, 0, 0, 0);
+  animation: glitch 1s infinite linear alternate-reverse;
+}
+
+@keyframes glitch {
+  0% { clip: rect(0, 9999px, 5px, 0); }
+  50% { clip: rect(10px, 9999px, 20px, 0); }
+  100% { clip: rect(20px, 9999px, 30px, 0); }
+}
+
+section.card {
+  padding: 3em 2em;
+}
+
+.grid.two-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5em;
+}
+
+.grid.three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5em;
+}
+
+.post-box, .note-group, .resource-box {
+  background: #222;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.resource-box {
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.resource-box:hover {
+  background: #333;
+}
+
+.explore {
+  display: none;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  color: #33FF99;
+  text-decoration: none;
+}
+
+.resource-box:hover .explore {
+  display: inline;
+}
+
+.center {
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+.btn {
+  background: #33FF99;
+  color: #1A1A1A;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}

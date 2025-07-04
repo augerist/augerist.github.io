@@ -1,3 +1,6 @@
+/* page-wide: declares the font, background color, and text color 
+  TO-DO: add subtext (#8B949E), and accent colors (#33FF99, #A259FF)
+*/
 body {
   margin: 0;
   font-family: 'Courier New', monospace;
@@ -5,6 +8,7 @@ body {
   color: #D0D0D0;
 }
 
+/* stylizes the title card (header and navigation) */
 header {
   display: flex;
   justify-content: space-between;
@@ -12,22 +16,18 @@ header {
   padding: 1em 2em;
   background-color: #111;
 }
-
 .logo {
   height: 32px;
   margin-right: 0.5em;
 }
-
 .nav-left, .nav-right {
   display: flex;
   align-items: center;
 }
-
 .nav-left .site-title {
   font-size: 1.2rem;
   color: #33FF99;
 }
-
 .nav-right a {
   margin-left: 1.5em;
   color: #D0D0D0;
@@ -35,6 +35,9 @@ header {
   font-weight: bold;
 }
 
+/* defines the glitch "animation", dot-grid background, and the entire hero card
+  TODO: fix the glitch animation because it actually sucks lol
+*/
 .hero {
   height: 60vh;
   background: radial-gradient(#A259FF11 1px, transparent 1px);
@@ -43,13 +46,11 @@ header {
   justify-content: center;
   align-items: center;
 }
-
 h1.glitch {
   font-size: 4rem;
   color: #33FF99;
   position: relative;
 }
-
 h1.glitch::before, h1.glitch::after {
   content: attr(data-text);
   position: absolute;
@@ -59,44 +60,40 @@ h1.glitch::before, h1.glitch::after {
   clip: rect(0, 0, 0, 0);
   animation: glitch 1s infinite linear alternate-reverse;
 }
-
 @keyframes glitch {
   0% { clip: rect(0, 9999px, 5px, 0); }
   50% { clip: rect(10px, 9999px, 20px, 0); }
   100% { clip: rect(20px, 9999px, 30px, 0); }
 }
-
 section.card {
   padding: 3em 2em;
 }
 
+/* defines all stylization for the other cards
+  TODO: make it mine
+*/
 .grid.two-col {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5em;
 }
-
 .grid.three-col {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5em;
 }
-
 .post-box, .note-group, .resource-box {
   background: #222;
   padding: 1em;
   border-radius: 10px;
 }
-
 .resource-box {
   position: relative;
   transition: background 0.3s ease;
 }
-
 .resource-box:hover {
   background: #333;
 }
-
 .explore {
   display: none;
   position: absolute;
@@ -105,16 +102,13 @@ section.card {
   color: #33FF99;
   text-decoration: none;
 }
-
 .resource-box:hover .explore {
   display: inline;
 }
-
 .center {
   text-align: center;
   margin-top: 1.5em;
 }
-
 .btn {
   background: #33FF99;
   color: #1A1A1A;

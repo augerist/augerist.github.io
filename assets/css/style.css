@@ -7,14 +7,90 @@
   src: url('../fonts/JetBrainsMono-Regular.ttf') format('ttf');
 }
 
-/* page-wide: declares the font, background color, and text color 
-  TO-DO: add subtext (#8B949E), and accent colors (#33FF99, #A259FF)
-*/
-body {
+/* === Canvas Full-Screen Background Setup === */
+
+/* Reset margins and borders for all elements */
+* {
+  border: none;
   margin: 0;
-  font-family: 'JetBrainsMono', monospace;
-  background-color: #1A1A1A;
-  color: #D0D0D0;
+}
+
+/* Ensure html and body fill the full viewport and hide scrollbars */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Optional: body background if canvas is missing or slow to load */
+/* body {
+  background: radial-gradient(#555, #111);
+} */
+
+/* Style the canvas to cover the whole screen */
+canvas#background-canvas {
+  /* Sets a smooth radial gradient as background */
+  background: radial-gradient(#FFF, #DDD);
+
+  /* Optional enhancements you can toggle: */
+  /* background: radial-gradient(hsl(40, 80%, 60%), hsl(0, 50%, 40%)); */
+  /* filter: blur(1px) contrast(5); */
+  /* transform: scale(0.1); */
+
+  /* Sets the anchor point for transforms to top-left */
+  transform-origin: 0 0;
+
+  /* Ensures canvas covers the full screen */
+  width: 100%;
+  height: 100%;
+
+  /* Puts the canvas behind everything else */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Optional: hidden UI for interacting with the canvas (currently unused) */
+.ui {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  width: 120px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.ui p {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.ui p.zoom {
+  margin-bottom: 5px;
+}
+
+.ui p.zoom span {
+  margin-right: 5px;
+  border: solid 1px #777;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.ui p.zoom span.zoomin {
+  padding: 2px 5px;
+}
+
+.ui p.zoom span.zoomout {
+  padding: 2px 8px;
+}
+
+.ui p.zoom span:hover {
+  background: black;
+  color: white;
 }
 
 /* stylizes the title card (header and navigation) */

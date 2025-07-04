@@ -86,10 +86,10 @@ h1.glitch::after {
 }
 
 h1.glitch::before {
-  left: 3px;
+  left: 2px;
   text-shadow: -2px 0 #33FF99;
   animation-name: glitch-animation-1;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-timing-function: linear;
   animation-delay: 0s;
   animation-iteration-count: infinite;
@@ -97,7 +97,7 @@ h1.glitch::before {
 }
 
 h1.glitch::after {
-  left: -3px;
+  left: -2px;
   text-shadow: -2px 0 #A259FF;
   animation-name: glitch-animation-2;
   animation-duration: 2s;

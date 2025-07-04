@@ -49,6 +49,7 @@ header {
 .nav-right a {
   margin-left: 2em;
   font-size: 1.2rem;
+  padding-right: 2em;
   color: #D0D0D0;
   text-decoration: underline;;
   font-weight: bold;

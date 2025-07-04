@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- ensures proper display, sets the browser tab title to Auger's Log, and links to the stylesheet for visuals -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Auger's Log</title>
   <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
+
+<!-- Displays Augerist and the logo on the left, navigation text on the right -->
 <body>
   <header>
     <div class="nav-left">
@@ -15,14 +19,16 @@
     <div class="nav-right">
       <a href="#blog">Blog</a>
       <a href="#notes">Notes</a>
-      <a href="#resources">Resources ⌄</a>
+      <a href="#resources">Resources</a>
     </div>
   </header>
 
+<!-- Defines the large title at the top -->
   <section class="hero">
     <h1 class="glitch" data-text="Auger's Log">Auger's Log</h1>
   </section>
 
+<!-- Displays the blog card, right now with hardcoded posts and a broken learn more link -->
   <section id="blog" class="card blog-card">
     <h2>Recent Posts</h2>
     <div class="grid two-col">
@@ -34,6 +40,7 @@
     <div class="center"><a class="btn" href="#">Show More Posts</a></div>
   </section>
 
+<!-- Displays the notes card, right now with hardcoded notes -->
   <section id="notes" class="card notes-card">
     <h2>Notes</h2>
     <div class="grid two-col">
@@ -60,6 +67,7 @@
     </div>
   </section>
 
+  <!-- Displays the three resource sources, right now the links don't go to anything -->
   <section id="resources" class="card resources-card">
     <h2>Resources</h2>
     <div class="grid three-col">

@@ -12,6 +12,7 @@
   background: radial-gradient(#A259FF11 1px, transparent 1px);
   background-size: 32px 32px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

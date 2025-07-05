@@ -1,3 +1,38 @@
+@font-face {
+  font-family: 'Quantico';
+  src: url('../fonts/Quantico-Regular.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('../fonts/JetBrainsMono-Regular.ttf') format('ttf');
+}
+
+.hero {
+  height: 60vh;
+  background: radial-gradient(#A259FF11 1px, transparent 1px);
+  background-size: 32px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1.title {
+  color: #D0D0D0;
+  font-family: 'JetBrainsMono';
+  font-weight: 800;
+  position: relative;
+  font-size: 100px;
+  padding: 30px;
+}
+
+
+
+
+
+
+
+
+
+
 body, html {
     height: 100%;
 }
